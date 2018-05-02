@@ -1,13 +1,17 @@
 nav ul {
-  padding: 0px, 5px; }
+  margin: 0px auto;
+  padding: 0px 5px; }
 
 nav li {
   font-family: "Open Sans";
-  color: floralwhite; }
+  color: floralwhite;
+  margin: 0px auto;
+  padding: 0px 5px; }
 
 nav a {
   font-family: "Open Sans";
-  color: floralwhite; }
+  color: floralwhite;
+  margin: 0px, 5px; }
 
 .navbar-inverse {
   background-color: #f4142e; }

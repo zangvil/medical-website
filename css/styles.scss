@@ -10,17 +10,19 @@ $medical-font: "Open Sans";
 
 nav {
     ul {
-        padding: 0px, 5px;
+        @include zero-margin(0px, 5px);
     }
   
     li {
         font-family: $medical-font;
         color: floralwhite;
+        @include zero-margin(0px, 5px);
     }
   
     a {
       font-family: $medical-font;
       color: floralwhite;
+      margin: 0px, 5px;
     }
 }
 
