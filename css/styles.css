@@ -20,7 +20,13 @@ nav a {
   font-family: "Open Sans";
   background: floralwhite;
   color: #f4142e;
-  height: 220; }
+  height: 220px; }
+
+.big-jumbotron {
+  font-family: "Open Sans";
+  background: floralwhite;
+  color: #f4142e;
+  height: 340x; }
 
 .row-header {
   margin: 0px auto;
