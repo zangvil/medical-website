@@ -8,6 +8,11 @@ $medical-font: "Open Sans";
 	padding: $pad-up-dn $pad-left-right;
 }   
 
+body {
+    font-family: $medical-font;
+    background-color: floralwhite;
+}
+
 nav {
     ul {
         @include zero-margin(0px, 5px);
@@ -31,21 +36,13 @@ nav {
 }
 
 .jumbotron {
-    font-family: $medical-font;
-    background: floralwhite ;
-    color: $background-red-medical;
+    background: $color-medical;
+    color: floralwhite;
     height: 220px;
 }
 
-.big-jumbotron {
-    font-family: $medical-font;
-    background: floralwhite ;
-    color: $background-red-medical;
-    height: 340x;
-}
-
 .row-header {
-    @include zero-margin(0px, 250px);
+    @include zero-margin(0px, 190px);
     text-align: center;
 }
 
@@ -62,16 +59,13 @@ nav {
     margin: 30px 0px 15px 0px;
 }
 
-body {
-    font-family: $medical-font;
+.footer{
+    @include zero-margin(20px, 0px);
+    background-color: $color-medical;
 }
 
 .color-medical {
     color: $background-red-medical;
-}
-
-.flora {
-    background-color: floralwhite
 }
 
 .processblock1 {
