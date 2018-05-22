@@ -1,6 +1,6 @@
 $color-medical: #ff8080;
 $background-red-medical: #f4142e;
-$background-pale-medical: #f3cbcb;
+
 $medical-font: "Open Sans";
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
@@ -56,18 +56,52 @@ nav {
 }
 
 .row-oneline {
-    margin: 30px 0px 15px 0px;
+    margin: 30px -30px 25px -30px;
+    padding: 0px 0px 15px 0px;
+    text-align: center;
+    color: $background-red-medical;
+    border-bottom: 1px ridge;
 }
 
 .footer{
     @include zero-margin(20px, 0px);
-    background-color: $color-medical;
+    background-color: $background-red-medical;
 }
 
 .color-medical {
     color: $background-red-medical;
 }
 
+.carousel {
+    background: $color-medical;
+    color:  floralwhite;
+    border-radius: 55px;
+    overflow: hidden;
+    width: 700px;
+    margin: auto;
+
+    .carousel-item {
+        height: 250px;
+    }
+
+    a {
+        color: floralwhite;
+    }
+}
+
+.solution-card {
+    color: floralwhite;
+    width: 850px;
+    border-radius: 50px;
+
+    .card-header {
+        background-color: $background-red-medical;
+    }
+
+    .card-body {
+        background-color: $color-medical;
+    }
+}
 .processblock1 {
     border-radius: 10px;
     background-color: #bf504d;

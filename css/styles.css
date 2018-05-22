@@ -40,15 +40,40 @@ nav a {
   padding: 5px 0px; }
 
 .row-oneline {
-  margin: 30px 0px 15px 0px; }
+  margin: 30px -30px 25px -30px;
+  padding: 0px 0px 15px 0px;
+  text-align: center;
+  color: #f4142e;
+  border-bottom: 1px ridge; }
 
 .footer {
   margin: 0px auto;
   padding: 20px 0px;
-  background-color: #ff8080; }
+  background-color: #f4142e; }
 
 .color-medical {
   color: #f4142e; }
+
+.carousel {
+  background: #ff8080;
+  color: floralwhite;
+  border-radius: 55px;
+  overflow: hidden;
+  width: 700px;
+  margin: auto; }
+  .carousel .carousel-item {
+    height: 250px; }
+  .carousel a {
+    color: floralwhite; }
+
+.solution-card {
+  color: floralwhite;
+  width: 850px;
+  border-radius: 50px; }
+  .solution-card .card-header {
+    background-color: #f4142e; }
+  .solution-card .card-body {
+    background-color: #ff8080; }
 
 .processblock1 {
   border-radius: 10px;
