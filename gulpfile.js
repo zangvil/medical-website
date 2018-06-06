@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     rev = require('gulp-rev'),
     cleanCss = require('gulp-clean-css'),
     flatmap = require('gulp-flatmap'),
-    htmlmin = require('gulp-htmlmin');
+    htmlmin = require('gulp-htmlmin'),
+    git = require('gulp-git');
 
 
 gulp.task('sass', function () {
@@ -40,18 +41,18 @@ gulp.task('browser-sync', function () {
  });
 
  gulp.task('clean', function() {
-    return del(['dist']);
+    return del(['../dist'], {force: true});
 });
 
 gulp.task('copyfonts', function() {
     gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
-    .pipe(gulp.dest('./dist/fonts'));
+    .pipe(gulp.dest('../dist/fonts'));
  });
 
  gulp.task('imagemin', function() {
     return gulp.src('img/*.{png,jpg,gif}')
       .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-      .pipe(gulp.dest('dist/img'));
+      .pipe(gulp.dest('../dist/img'));
   });
 
   gulp.task('usemin', function() {
@@ -66,7 +67,30 @@ gulp.task('copyfonts', function() {
               inlinecss: [ cleanCss(), 'concat' ]
           }))
       }))
-      .pipe(gulp.dest('dist/'));
+      .pipe(gulp.dest('../dist/'));
+  });
+
+  gulp.task('add', function(){
+    return gulp.src('./git-test/*')
+      .pipe(git.add());
+  });
+
+  gulp.task('commit', function(){
+    return gulp.src('./git-test/*')
+      .pipe(git.commit('initial commit'));
+  });
+
+  gulp.task('push', function(){
+    git.push('origin', 'master', function (err) {
+      if (err) throw err;
+    });
+  });
+
+  gulp.task('push-dist',function(){
+    gulp.src('C:/Users/zangv/Documents/Physical-web/medical/dist', { cwd: 'public' });
+    gulp.start('add')
+    gulp.start('commit')
+    gulp.start('push')
   });
 
   gulp.task('build',['clean'], function() {
