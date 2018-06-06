@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     cleanCss = require('gulp-clean-css'),
     flatmap = require('gulp-flatmap'),
     htmlmin = require('gulp-htmlmin'),
-    git = require('gulp-git');
+    run = require('gulp-run-command').default;
 
 
 gulp.task('sass', function () {
@@ -41,7 +41,14 @@ gulp.task('browser-sync', function () {
  });
 
  gulp.task('clean', function() {
-    return del(['../dist'], {force: true});
+     var filesForDel = [
+        '../dist/*.html',
+        '../dist/fonts',
+        '../dist/css',
+        '../dist/js',
+        '../dist/img'
+     ];
+    return del(['filesForDel'], {force: true});
 });
 
 gulp.task('copyfonts', function() {
@@ -70,28 +77,13 @@ gulp.task('copyfonts', function() {
       .pipe(gulp.dest('../dist/'));
   });
 
-  gulp.task('add', function(){
-    return gulp.src('./git-test/*')
-      .pipe(git.add());
-  });
+  var command = [
+      'git add .',
+      'git commit -m "ready"',
+      'git push  git@github.com:zangvil/zangvil.github.io.git --force'
+    ];
 
-  gulp.task('commit', function(){
-    return gulp.src('./git-test/*')
-      .pipe(git.commit('initial commit'));
-  });
-
-  gulp.task('push', function(){
-    git.push('origin', 'master', function (err) {
-      if (err) throw err;
-    });
-  });
-
-  gulp.task('push-dist',function(){
-    gulp.src('C:/Users/zangv/Documents/Physical-web/medical/dist', { cwd: 'public' });
-    gulp.start('add')
-    gulp.start('commit')
-    gulp.start('push')
-  });
+  gulp.task('distPush', run(command, {cwd : 'C:/Users/zangv/Documents/Physical-web/medical/dist', ignoreErrors : true}));
 
   gulp.task('build',['clean'], function() {
     gulp.start('copyfonts','imagemin','usemin');
