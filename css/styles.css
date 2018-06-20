@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:300");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 body {
-  font-family: "Open Sans";
+  font-family: "Kanit", sans-serif;
   background-color: floralwhite; }
 
 nav ul {
@@ -7,13 +9,13 @@ nav ul {
   padding: 0px 5px; }
 
 nav li {
-  font-family: "Open Sans";
+  font-family: "Kanit", sans-serif;
   color: floralwhite;
   margin: 0px auto;
   padding: 0px 5px; }
 
 nav a {
-  font-family: "Open Sans";
+  font-family: "Kanit", sans-serif;
   color: floralwhite;
   margin: 0px, 5px; }
 
@@ -74,6 +76,21 @@ nav a {
     background-color: #f4142e; }
   .solution-card .card-body {
     background-color: #ff8080; }
+
+.services-tab {
+  text-align: center; }
+  .services-tab .col-4 {
+    margin-bottom: 1.5rem; }
+    .services-tab .col-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem; }
+    .services-tab .col-4 img {
+      width: 120px;
+      height: 120px;
+      border: solid; }
+    .services-tab .col-4 .btn-medical {
+      color: floralwhite;
+      background-color: #f4142e; }
 
 .processblock1 {
   border-radius: 10px;

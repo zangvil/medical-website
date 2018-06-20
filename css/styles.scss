@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
 $color-medical: #ff8080;
 $background-red-medical: #f4142e;
 
-$medical-font: "Open Sans";
+$medical-font: 'Kanit', sans-serif;
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
 	margin:0px auto;
@@ -102,6 +105,32 @@ nav {
         background-color: $color-medical;
     }
 }
+
+.services-tab {
+    text-align: center;
+
+    .col-4 {
+        margin-bottom: 1.5rem;
+
+        p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border: solid;
+        }             
+
+        .btn-medical {
+            color: floralwhite;
+            background-color: $background-red-medical
+        }
+    }
+}
+
+
 .processblock1 {
     border-radius: 10px;
     background-color: #bf504d;
