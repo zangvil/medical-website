@@ -1,0 +1,22 @@
+.con {
+    position: absolute;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+img {
+    margin: 5px;
+    position: fixed;
+}
+.test1 {
+    position: absolute;
+    opacity: 0;
+    padding-left: 50px;
+}
+.test:hover {
+    opacity: 0.5;
+}
+
+.test:hover .test1 {
+    opacity: 1  ;
+}

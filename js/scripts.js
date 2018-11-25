@@ -38,3 +38,9 @@ $(document).ready(function() {
         $('#CustomApplications').removeClass('collapse');
     });
 });
+
+$(document).ready(function() {
+    $("#Cardio").hover(function(){
+        $("#Cardiotext").css("opacity", "1");
+    });
+});

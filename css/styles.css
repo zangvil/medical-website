@@ -4,6 +4,68 @@ body {
   font-family: "Kanit", sans-serif;
   background-color: floralwhite; }
 
+.headline {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.row.colorblocks {
+  color: floralwhite; }
+  .row.colorblocks [class*=" col-"] {
+    height: 250px;
+    text-align: center; }
+    .row.colorblocks [class*=" col-"] h4 {
+      margin-top: 30px; }
+    .row.colorblocks [class*=" col-"] p {
+      margin-top: 25px; }
+
+.solutions {
+  margin-top: 50px; }
+
+header.singlepage {
+  height: 300px;
+  text-align: center; }
+  header.singlepage p {
+    width: 700px;
+    margin: auto; }
+  header.singlepage h1 {
+    margin: auto;
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 30px; }
+
+.customers {
+  margin-top: 75px; }
+  .customers div.row div.col {
+    text-align: center;
+    margin-bottom: 15px; }
+  .customers div.row div.col-6 {
+    padding-left: 0px;
+    padding-right: 0px; }
+    .customers div.row div.col-6 div.imgtext img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto; }
+    .customers div.row div.col-6 div.imgtext div {
+      background-color: floralwhite;
+      padding: 12px 13px 2px 25px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 48px;
+      width: 174px;
+      display: block; }
+    .customers div.row div.col-6 .img-body {
+      background-color: black;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      text-align: center;
+      padding: 15px 0px;
+      display: block;
+      opacity: 0;
+      visibility: hidden; }
+
 nav ul {
   margin: 0px auto;
   padding: 0px 5px; }
@@ -23,7 +85,7 @@ nav a {
   background-color: #f4142e; }
 
 .jumbotron {
-  background: #ff8080;
+  background: #e55e6b;
   color: floralwhite;
   height: 220px; }
 
@@ -57,7 +119,7 @@ nav a {
   color: #f4142e; }
 
 .carousel {
-  background: #ff8080;
+  background: #e55e6b;
   color: floralwhite;
   border-radius: 55px;
   overflow: hidden;
@@ -75,7 +137,7 @@ nav a {
   .solution-card .card-header {
     background-color: #f4142e; }
   .solution-card .card-body {
-    background-color: #ff8080; }
+    background-color: #e55e6b; }
 
 .services-tab {
   text-align: center; }

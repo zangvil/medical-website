@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:300');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
-$color-medical: #ff8080;
-$background-red-medical: #f4142e;
+$color1: rgba(244, 20, 46, 1);
+$color2: rgba(229, 94, 107, 1);
+$color3: rgba(255, 250, 240, 1);
+$color4: rgba(43, 89, 195, 1);
+$color5: rgba(55, 148, 91, 1);
+$color6: rgba(206, 132, 173, 1);
+$color7: rgba(255, 147, 79, 1);
+$color8: rgba(123, 224, 173, 1);
 
 $medical-font: 'Kanit', sans-serif;
 
@@ -16,6 +22,99 @@ body {
     background-color: floralwhite;
 }
 
+.headline {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row.colorblocks {
+    color: floralwhite;
+
+    [class*=" col-"] {
+        height: 250px;
+        text-align: center;
+        
+        h4 {
+            margin-top: 30px;
+        }
+
+        p {
+            margin-top: 25px;
+        }
+    }
+}
+
+.solutions {
+    margin-top: 50px;
+}
+
+header.singlepage {
+    height: 300px;
+    text-align: center;
+
+    p {
+        width: 700px;
+        margin: auto;
+    }
+
+    h1 {
+        margin: auto;
+        width: 900px;
+        margin-top: 50px;
+        margin-bottom: 30px
+    }
+}
+
+.customers {
+    margin-top: 75px;
+
+    div.row {
+
+        div.col {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        div.col-6 { 
+            padding-left: 0px;
+            padding-right: 0px;
+
+            div.imgtext {
+
+                img {
+                    display: block;
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                div {
+                    background-color: $color3;
+                    padding: 12px 13px 2px 25px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 48px;
+                    width: 174px;
+                    display: block;
+                }
+            }
+            .img-body {
+                background-color: black;
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                text-align: center;
+                padding: 15px 0px;
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+
+            }
+            
+        }
+    }
+}
 nav {
     ul {
         @include zero-margin(0px, 5px);
@@ -35,11 +134,11 @@ nav {
 }
 
 .navbar-inverse {
-    background-color: $background-red-medical;
+    background-color: $color1;
 }
 
 .jumbotron {
-    background: $color-medical;
+    background: $color2;
     color: floralwhite;
     height: 220px;
 }
@@ -62,21 +161,21 @@ nav {
     margin: 30px -30px 25px -30px;
     padding: 0px 0px 15px 0px;
     text-align: center;
-    color: $background-red-medical;
+    color: $color1;
     border-bottom: 1px ridge;
 }
 
 .footer{
     @include zero-margin(20px, 0px);
-    background-color: $background-red-medical;
+    background-color: $color1;
 }
 
 .color-medical {
-    color: $background-red-medical;
+    color: $color1;
 }
 
 .carousel {
-    background: $color-medical;
+    background: $color2;
     color:  floralwhite;
     border-radius: 55px;
     overflow: hidden;
@@ -98,11 +197,11 @@ nav {
     border-radius: 50px;
 
     .card-header {
-        background-color: $background-red-medical;
+        background-color: $color1;
     }
 
     .card-body {
-        background-color: $color-medical;
+        background-color: $color2;
     }
 }
 
@@ -125,7 +224,7 @@ nav {
 
         .btn-medical {
             color: floralwhite;
-            background-color: $background-red-medical
+            background-color: $color1
         }
     }
 }
